@@ -1,0 +1,55 @@
+{
+  "name": "pescalead",
+  "version": "1.0.2",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "export:web": "expo export --platform web",
+    "prebuild:android": "expo prebuild --platform android",
+    "build:apk": "bash scripts/build-android.sh",
+    "check:docs": "node scripts/check-docs.mjs",
+    "check": "npm run typecheck && npm test && npm run check:docs",
+    "ios": "expo run:ios",
+    "test:e2e": "playwright test",
+    "test:providers": "node scripts/smoke-providers.mjs",
+    "emulator": "node scripts/emulator.mjs start",
+    "emulator:doctor": "node scripts/emulator.mjs doctor",
+    "emulator:stop": "node scripts/emulator.mjs stop",
+    "emulator:verify": "node scripts/verify-android.mjs"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^15.0.3",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "^58.0.0",
+    "expo-document-picker": "~58.0.5",
+    "expo-file-system": "~58.0.14",
+    "expo-font": "~58.0.12",
+    "expo-linear-gradient": "~58.0.4",
+    "expo-location": "~58.0.22",
+    "expo-print": "~58.0.9",
+    "expo-secure-store": "~58.0.3",
+    "expo-sharing": "~58.0.23",
+    "expo-status-bar": "~58.0.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-native": "0.88.1",
+    "react-native-safe-area-context": "~5.11.1",
+    "react-native-web": "^0.21.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^22.20.5",
+    "@types/react": "~19.3.0",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=22.21.1"
+  }
+}

@@ -1,0 +1,17 @@
+node_modules/
+.expo/
+dist/
+android/
+ios/
+artifacts/
+coverage/
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.log
+playwright-report/
+test-results/
+.cache/
+.signing/
